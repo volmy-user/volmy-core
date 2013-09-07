@@ -20,13 +20,13 @@
 #include <stdlib.h>
 #include <volmy/instance.h>
 
-volmy_instance_t * volmy_instance_create()
+volmy_instance_t * volmy_new()
 {
     volmy_instance_t * instance = (volmy_instance_t*) malloc(sizeof(volmy_instance_t));
     return instance;
 }
 
-void volmy_instance_free(volmy_instance_t ** _instance)
+void volmy_free(volmy_instance_t ** _instance)
 {
     volmy_instance_t * instance = * _instance;
     free(instance);

@@ -22,8 +22,10 @@ cmake_minimum_required(VERSION 2.8.8)
 project(volmy-core)
 
 set(TARGET volmycore)
-set(SOURCES instance.c)
 
-include_directories(../include)
+set(HEADERS include/volmy/volmy.h include/volmy/instance.h)
+set(SOURCES src/instance.c)
 
-add_library(${TARGET} SHARED ${SOURCES})
+include_directories(include)
+
+add_library(${TARGET} SHARED ${SOURCES} ${HEADERS})

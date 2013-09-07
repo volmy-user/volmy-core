@@ -26,7 +26,7 @@ typedef struct
 {
 } volmy_instance_t;
 
-volmy_instance_t * volmy_instance_new();
-void volmy_instance_free(volmy_instance_t ** instance);
+volmy_instance_t * volmy_new();
+void volmy_free(volmy_instance_t ** instance);
 
 #endif // VOLMY_CORE_INSTANCE_H
