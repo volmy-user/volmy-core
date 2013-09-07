@@ -17,9 +17,13 @@
 # IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+cmake_minimum_required(VERSION 2.8.8)
+
 project(volmy-core)
 
 set(TARGET volmycore)
 set(SOURCES instance.c)
+
+include_directories(../include)
 
 add_library(${TARGET} SHARED ${SOURCES})

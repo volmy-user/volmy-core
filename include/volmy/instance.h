@@ -17,17 +17,16 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#include <stdlib.h>
-#include <volmy/instance.h>
+#ifndef VOLMY_CORE_INSTANCE_H
+#define VOLMY_CORE_INSTANCE_H
 
-volmy_instance_t * volmy_instance_create()
-{
-    volmy_instance_t * instance = (volmy_instance_t*) malloc(sizeof(volmy_instance_t));
-    return instance;
-}
+#include <stddef.h>
 
-void volmy_instance_free(volmy_instance_t ** _instance)
+typedef struct
 {
-    volmy_instance_t * instance = * _instance;
-    free(instance);
-}
+} volmy_instance_t;
+
+volmy_instance_t * volmy_instance_new();
+void volmy_instance_free(volmy_instance_t ** instance);
+
+#endif // VOLMY_CORE_INSTANCE_H
